@@ -20,12 +20,16 @@ let clibsodiumTarget: Target
                         .define("_CRT_SECURE_NO_WARNINGS",
                                 .when(platforms: [.windows])),
                       ],
+                      swiftSettings: [
+                        .interoperabilityMode(.C),
+                      ],
                       linkerSettings: [
                         .unsafeFlags([
                           "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v142/static",
                         ]),
                         .linkedLibrary("libsodium"),
-                      ])
+                      ]
+                      )
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
