@@ -7,7 +7,7 @@
 #include "crypto_kdf_blake2b.h"
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -46,7 +46,7 @@ SODIUM_EXPORT
 void crypto_kdf_keygen(unsigned char k[crypto_kdf_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

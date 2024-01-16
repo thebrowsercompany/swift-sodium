@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -93,7 +93,7 @@ void crypto_aead_xchacha20poly1305_ietf_keygen(unsigned char k[crypto_aead_xchac
 #define crypto_aead_xchacha20poly1305_IETF_ABYTES           crypto_aead_xchacha20poly1305_ietf_ABYTES
 #define crypto_aead_xchacha20poly1305_IETF_MESSAGEBYTES_MAX crypto_aead_xchacha20poly1305_ietf_MESSAGEBYTES_MAX
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

@@ -7,7 +7,7 @@
 #include "crypto_stream_chacha20.h"
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -101,7 +101,7 @@ SODIUM_EXPORT
 void crypto_secretstream_xchacha20poly1305_rekey
     (crypto_secretstream_xchacha20poly1305_state *state);
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

@@ -1,7 +1,7 @@
 #ifndef crypto_onetimeauth_poly1305_H
 #define crypto_onetimeauth_poly1305_H
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -65,7 +65,7 @@ SODIUM_EXPORT
 void crypto_onetimeauth_poly1305_keygen(unsigned char k[crypto_onetimeauth_poly1305_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

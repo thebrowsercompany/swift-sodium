@@ -6,7 +6,7 @@
 #include "crypto_shorthash_siphash24.h"
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -34,7 +34,7 @@ SODIUM_EXPORT
 void crypto_shorthash_keygen(unsigned char k[crypto_shorthash_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

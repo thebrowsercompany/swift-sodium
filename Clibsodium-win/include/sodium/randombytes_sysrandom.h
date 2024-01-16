@@ -5,14 +5,14 @@
 #include "export.h"
 #include "randombytes.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
 SODIUM_EXPORT
 extern struct randombytes_implementation randombytes_sysrandom_implementation;
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

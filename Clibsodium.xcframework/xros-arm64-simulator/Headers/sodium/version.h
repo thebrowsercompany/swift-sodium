@@ -10,7 +10,7 @@
 #define SODIUM_LIBRARY_VERSION_MINOR 1
 #define SODIUM_LIBRARY_MINIMAL 1
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
@@ -26,7 +26,7 @@ int         sodium_library_version_minor(void);
 SODIUM_EXPORT
 int         sodium_library_minimal(void);
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

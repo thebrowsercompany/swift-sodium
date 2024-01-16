@@ -5,7 +5,7 @@
 #include "crypto_stream_xsalsa20.h"
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -105,7 +105,7 @@ int crypto_box_curve25519xsalsa20poly1305_open_afternm(unsigned char *m,
                                                        const unsigned char *k)
             __attribute__ ((warn_unused_result)) __attribute__ ((nonnull(2, 4, 5)));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

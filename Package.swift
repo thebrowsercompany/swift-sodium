@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let clibsodiumTarget: Target
@@ -13,6 +13,7 @@ let clibsodiumTarget: Target
                       cSettings: [
                         .headerSearchPath("include"),
                       ],
+              
                       cxxSettings: [
                         .define("__swift__"),
                         .define("INTERNAL_EXPERIMENTAL"),

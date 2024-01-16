@@ -4,7 +4,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
@@ -21,7 +21,7 @@ SODIUM_EXPORT
 void sodium_misuse(void)
             __attribute__ ((noreturn));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

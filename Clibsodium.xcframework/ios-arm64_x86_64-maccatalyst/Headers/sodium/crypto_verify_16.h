@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
@@ -16,7 +16,7 @@ SODIUM_EXPORT
 int crypto_verify_16(const unsigned char *x, const unsigned char *y)
             __attribute__ ((warn_unused_result)) __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

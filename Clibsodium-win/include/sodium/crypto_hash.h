@@ -13,7 +13,7 @@
 #include "crypto_hash_sha512.h"
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -33,7 +33,7 @@ SODIUM_EXPORT
 const char *crypto_hash_primitive(void)
             __attribute__ ((warn_unused_result));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

@@ -9,7 +9,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -65,7 +65,7 @@ SODIUM_EXPORT
 void randombytes(unsigned char * const buf, const unsigned long long buf_len)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

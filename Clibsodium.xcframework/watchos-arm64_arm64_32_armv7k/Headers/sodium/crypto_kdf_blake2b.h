@@ -7,7 +7,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -37,7 +37,7 @@ int crypto_kdf_blake2b_derive_from_key(unsigned char *subkey, size_t subkey_len,
                                        const unsigned char key[crypto_kdf_blake2b_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

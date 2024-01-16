@@ -4,7 +4,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
@@ -48,7 +48,7 @@ int sodium_runtime_has_rdrand(void);
 
 int _sodium_runtime_get_cpu_features(void);
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 extern "C" {
 #endif
 
@@ -93,7 +93,7 @@ SODIUM_EXPORT
 void crypto_core_ed25519_scalar_reduce(unsigned char *r, const unsigned char *s)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 

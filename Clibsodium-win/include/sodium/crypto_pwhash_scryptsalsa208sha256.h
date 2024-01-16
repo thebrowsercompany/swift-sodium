@@ -7,7 +7,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -113,7 +113,7 @@ int crypto_pwhash_scryptsalsa208sha256_str_needs_rehash(const char * str,
                                                         size_t memlimit)
             __attribute__ ((warn_unused_result))  __attribute__ ((nonnull));
 
-#ifdef __cplusplus
+#ifdef __cplusplusNOTDEFINED
 }
 #endif
 
