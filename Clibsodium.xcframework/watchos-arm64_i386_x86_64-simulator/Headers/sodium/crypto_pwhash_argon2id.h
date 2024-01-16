@@ -7,7 +7,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -115,7 +115,7 @@ int crypto_pwhash_argon2id_str_needs_rehash(const char * str,
                                             unsigned long long opslimit, size_t memlimit)
             __attribute__ ((warn_unused_result))  __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

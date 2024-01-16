@@ -6,7 +6,7 @@
 #include "crypto_generichash_blake2b.h"
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -77,7 +77,7 @@ SODIUM_EXPORT
 void crypto_generichash_keygen(unsigned char k[crypto_generichash_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

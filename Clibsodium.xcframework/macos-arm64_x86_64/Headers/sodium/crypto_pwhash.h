@@ -7,7 +7,7 @@
 #include "crypto_pwhash_argon2id.h"
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -140,7 +140,7 @@ SODIUM_EXPORT
 const char *crypto_pwhash_primitive(void)
             __attribute__ ((warn_unused_result));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

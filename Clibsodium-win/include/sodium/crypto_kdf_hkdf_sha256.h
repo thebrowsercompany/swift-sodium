@@ -9,7 +9,7 @@
 #include "crypto_auth_hmacsha256.h"
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -67,7 +67,7 @@ int crypto_kdf_hkdf_sha256_extract_final(crypto_kdf_hkdf_sha256_state *state,
                                          unsigned char prk[crypto_kdf_hkdf_sha256_KEYBYTES])
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

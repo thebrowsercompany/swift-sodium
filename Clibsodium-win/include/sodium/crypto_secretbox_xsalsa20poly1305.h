@@ -5,7 +5,7 @@
 #include "crypto_stream_xsalsa20.h"
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -62,7 +62,7 @@ size_t crypto_secretbox_xsalsa20poly1305_boxzerobytes(void);
 SODIUM_EXPORT
 size_t crypto_secretbox_xsalsa20poly1305_zerobytes(void);
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

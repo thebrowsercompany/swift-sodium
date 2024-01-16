@@ -6,7 +6,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -172,7 +172,7 @@ int sodium_unpad(size_t *unpadded_buflen_p, const unsigned char *buf,
 
 int _sodium_alloc_init(void);
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

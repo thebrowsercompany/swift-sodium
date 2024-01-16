@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -43,7 +43,7 @@ int crypto_shorthash_siphashx24(unsigned char *out, const unsigned char *in,
             __attribute__ ((nonnull(1, 4)));
 #endif
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

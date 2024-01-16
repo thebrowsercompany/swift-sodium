@@ -5,7 +5,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -35,7 +35,7 @@ int crypto_scalarmult_curve25519_base(unsigned char *q,
                                       const unsigned char *n)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

@@ -5,7 +5,7 @@
 #include "crypto_hash_sha512.h"
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -117,7 +117,7 @@ int crypto_sign_ed25519ph_final_verify(crypto_sign_ed25519ph_state *state,
                                        const unsigned char *pk)
             __attribute__ ((warn_unused_result)) __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

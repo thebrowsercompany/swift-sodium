@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -93,7 +93,7 @@ void crypto_core_ristretto255_scalar_reduce(unsigned char *r,
                                             const unsigned char *s)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

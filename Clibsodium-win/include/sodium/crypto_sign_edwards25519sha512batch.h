@@ -15,7 +15,7 @@
 #include <stddef.h>
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -48,7 +48,7 @@ int crypto_sign_edwards25519sha512batch_keypair(unsigned char *pk,
                                                 unsigned char *sk)
             __attribute__ ((deprecated)) __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

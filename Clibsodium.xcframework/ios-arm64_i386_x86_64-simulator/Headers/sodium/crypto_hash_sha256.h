@@ -14,7 +14,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
@@ -53,7 +53,7 @@ int crypto_hash_sha256_final(crypto_hash_sha256_state *state,
                              unsigned char *out)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 

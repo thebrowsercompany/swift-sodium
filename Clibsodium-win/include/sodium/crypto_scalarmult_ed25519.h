@@ -6,7 +6,7 @@
 
 #include "export.h"
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -44,7 +44,7 @@ SODIUM_EXPORT
 int crypto_scalarmult_ed25519_base_noclamp(unsigned char *q, const unsigned char *n)
             __attribute__ ((nonnull));
 
-#ifdef __cplusplusNOTDEFINED
+#ifdef __cplusplus
 }
 #endif
 
