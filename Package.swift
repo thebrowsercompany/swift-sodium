@@ -10,9 +10,9 @@ let clibsodiumTarget: Target
     clibsodiumTarget = .target(name: "Clibsodium",
                     path: "Clibsodium-win",
                       publicHeadersPath: "include",
-                    //   cSettings: [
-                    //     .headerSearchPath("include"),
-                    //   ],
+                       cSettings: [
+                         .headerSearchPath("include"),
+                       ],
               
                       cxxSettings: [
                         .define("__swift__"),
