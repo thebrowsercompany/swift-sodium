@@ -17,7 +17,7 @@ let clibsodiumTarget: Target
                       cxxSettings: [
                         .define("__swift__"),
                         .define("INTERNAL_EXPERIMENTAL"),
-                        // .define("SODIUM_STATIC"),
+                        .define("SODIUM_STATIC"),
                         .define("_CRT_SECURE_NO_WARNINGS",
                                 .when(platforms: [.windows])),
                       ],
@@ -61,9 +61,13 @@ let package = Package(
             dependencies: ["Clibsodium"],
             path: "Sodium",
             exclude: ["libsodium", "Info.plist"],
-                                  swiftSettings: [
-                        .interoperabilityMode(.Cxx),
-                      ]),
+            cxxSettings: [
+               .define("SODIUM_STATIC"),
+            ],
+            swiftSettings: [
+              .interoperabilityMode(.Cxx),
+            ]
+        ),
         .testTarget(
             name: "SodiumTests",
             dependencies: ["Sodium"],
