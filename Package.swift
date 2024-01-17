@@ -7,30 +7,25 @@ let clibsodiumTarget: Target
         name: "Clibsodium",
         path: "Clibsodium.xcframework")
 #elseif os(Windows)
-    clibsodiumTarget = .target(name: "Clibsodium",
-                    path: "Clibsodium-win",
-                      publicHeadersPath: "include",
-                       cSettings: [
-                         .headerSearchPath("include"),
-                       ],
-              
-                      cxxSettings: [
-                        .define("__swift__"),
-                        .define("INTERNAL_EXPERIMENTAL"),
-                        .define("SODIUM_STATIC"),
-                        .define("_CRT_SECURE_NO_WARNINGS",
-                                .when(platforms: [.windows])),
-                      ],
-                      swiftSettings: [
-                        .interoperabilityMode(.Cxx),
-                      ],
-                      linkerSettings: [
-                        .unsafeFlags([
-                          "-Lx64/Release/v143/static", //spm/checkouts/swift-sodium/Clibsodium-win/
-                        ]),
-                        .linkedLibrary("libsodium"),
-                      ]
-                      )
+    clibsodiumTarget = .target(
+        name: "Clibsodium",
+        path: "Clibsodium-win",
+        publicHeadersPath: "include",
+        cxxSettings: [
+          .define("__swift__"),
+          .define("INTERNAL_EXPERIMENTAL"),
+          .define("SODIUM_STATIC"),
+          .define("_CRT_SECURE_NO_WARNINGS"),
+        ],
+        swiftSettings: [
+          .interoperabilityMode(.Cxx),
+        ],
+        linkerSettings: [
+          .unsafeFlags([
+            "-Lx64/Release/v143/static",
+          ]),
+          .linkedLibrary("libsodium"),
+        ])
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
@@ -60,7 +55,9 @@ let package = Package(
             name: "Sodium",
             dependencies: ["Clibsodium"],
             path: "Sodium",
-            exclude: ["libsodium", "Info.plist"]
+            exclude: ["libsodium", "Info.plist"],
+            // Required to enable static linking on Windows
+            cxxSettings: [ .define("SODIUM_STATIC") ]
         ),
         .testTarget(
             name: "SodiumTests",
