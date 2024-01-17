@@ -62,6 +62,12 @@ let package = Package(
             exclude: ["libsodium", "Info.plist"],
                                   swiftSettings: [
                         .interoperabilityMode(.Cxx),
+                      ],
+                                            linkerSettings: [
+                        .unsafeFlags([
+                          "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v142/static",
+                        ]),
+                        .linkedLibrary("libsodium"),
                       ]),
         .testTarget(
             name: "SodiumTests",
