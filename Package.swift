@@ -21,7 +21,7 @@ let clibsodiumTarget: Target
                                 .when(platforms: [.windows])),
                       ],
                       swiftSettings: [
-                        .interoperabilityMode(.C),
+                        .interoperabilityMode(.Cxx),
                       ],
                       linkerSettings: [
                         .unsafeFlags([
@@ -59,7 +59,10 @@ let package = Package(
             name: "Sodium",
             dependencies: ["Clibsodium"],
             path: "Sodium",
-            exclude: ["libsodium", "Info.plist"]),
+            exclude: ["libsodium", "Info.plist"],
+                                  swiftSettings: [
+                        .interoperabilityMode(.Cxx),
+                      ]),
         .testTarget(
             name: "SodiumTests",
             dependencies: ["Sodium"],
