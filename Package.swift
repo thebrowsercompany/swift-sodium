@@ -14,12 +14,12 @@ let clibsodiumTarget: Target
                         .headerSearchPath("include"),
                       ],
               
-                      cxxSettings: [
-                        .define("__swift__"),
-                        .define("INTERNAL_EXPERIMENTAL"),
-                        .define("_CRT_SECURE_NO_WARNINGS",
-                                .when(platforms: [.windows])),
-                      ],
+                    //   cxxSettings: [
+                    //     .define("__swift__"),
+                    //     .define("INTERNAL_EXPERIMENTAL"),
+                    //     .define("_CRT_SECURE_NO_WARNINGS",
+                    //             .when(platforms: [.windows])),
+                    //   ],
                       swiftSettings: [
                         .interoperabilityMode(.Cxx),
                       ],
