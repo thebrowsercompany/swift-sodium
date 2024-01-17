@@ -25,7 +25,7 @@ let clibsodiumTarget: Target
                       ],
                       linkerSettings: [
                         .unsafeFlags([
-                          "-Lx64/Release/v142/static",
+                          "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v142/static",
                         ]),
                         .linkedLibrary("libsodium"),
                       ]
