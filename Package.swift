@@ -10,7 +10,10 @@ let clibsodiumTarget: Target
     clibsodiumTarget = .target(
         name: "Clibsodium",
         path: "Clibsodium-win",
-        publicHeadersPath: "include")
+        publicHeadersPath: "include",
+        linkerSettings: [
+          .linkedLibrary("libsodium"),
+        ])
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
@@ -52,7 +55,6 @@ let package = Package(
                 .unsafeFlags([
                     "-LClibsodium-win/x64/Release/v143/static",
                 ]),
-                .linkedLibrary("libsodium"),
             ]
         ),
     ]
