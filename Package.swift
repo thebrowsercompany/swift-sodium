@@ -66,7 +66,7 @@ let package = Package(
                                             linkerSettings: [
                         .unsafeFlags([
                           "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v143/dynamic",
-                        ]),
+                        ]), //dummy
                         .linkedLibrary("libsodium"),
                       ]),
         .testTarget(
