@@ -17,7 +17,7 @@ let clibsodiumTarget: Target
                       cxxSettings: [
                         .define("__swift__"),
                         .define("INTERNAL_EXPERIMENTAL"),
-                        .define("SODIUM_STATIC"),
+                        // .define("SODIUM_STATIC"),
                         .define("_CRT_SECURE_NO_WARNINGS",
                                 .when(platforms: [.windows])),
                       ],
