@@ -60,13 +60,7 @@ let package = Package(
             name: "Sodium",
             dependencies: ["Clibsodium"],
             path: "Sodium",
-            exclude: ["libsodium", "Info.plist"],
-            cxxSettings: [
-               .define("SODIUM_STATIC"),
-            ],
-            swiftSettings: [
-              .interoperabilityMode(.Cxx),
-            ]
+            exclude: ["libsodium", "Info.plist"]
         ),
         .testTarget(
             name: "SodiumTests",
