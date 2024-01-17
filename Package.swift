@@ -17,6 +17,7 @@ let clibsodiumTarget: Target
                       cxxSettings: [
                         .define("__swift__"),
                         .define("INTERNAL_EXPERIMENTAL"),
+                        .define("SODIUM_STATIC"),
                         .define("_CRT_SECURE_NO_WARNINGS",
                                 .when(platforms: [.windows])),
                       ],
@@ -25,7 +26,7 @@ let clibsodiumTarget: Target
                       ],
                       linkerSettings: [
                         .unsafeFlags([
-                          "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v142/static",
+                          "-Lx64/Release/v143/static", //spm/checkouts/swift-sodium/Clibsodium-win/
                         ]),
                         .linkedLibrary("libsodium"),
                       ]
@@ -62,12 +63,6 @@ let package = Package(
             exclude: ["libsodium", "Info.plist"],
                                   swiftSettings: [
                         .interoperabilityMode(.Cxx),
-                      ],
-                                            linkerSettings: [
-                        .unsafeFlags([
-                          "-Lspm/checkouts/swift-sodium/Clibsodium-win/x64/Release/v143/dynamic",
-                        ]), //dummy
-                        .linkedLibrary("libsodium"),
                       ]),
         .testTarget(
             name: "SodiumTests",
