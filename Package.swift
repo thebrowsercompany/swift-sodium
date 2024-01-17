@@ -10,22 +10,7 @@ let clibsodiumTarget: Target
     clibsodiumTarget = .target(
         name: "Clibsodium",
         path: "Clibsodium-win",
-        publicHeadersPath: "include",
-        cxxSettings: [
-          .define("__swift__"),
-          .define("INTERNAL_EXPERIMENTAL"),
-          .define("SODIUM_STATIC"),
-          .define("_CRT_SECURE_NO_WARNINGS"),
-        ],
-        swiftSettings: [
-          .interoperabilityMode(.Cxx),
-        ],
-        linkerSettings: [
-          .unsafeFlags([
-            "-Lx64/Release/v143/static",
-          ]),
-          .linkedLibrary("libsodium"),
-        ])
+        publicHeadersPath: "include")
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
@@ -62,6 +47,13 @@ let package = Package(
         .testTarget(
             name: "SodiumTests",
             dependencies: ["Sodium"],
-            exclude: ["Info.plist"]),
+            exclude: ["Info.plist"],
+            linkerSettings: [
+                .unsafeFlags([
+                    "-LClibsodium-win/x64/Release/v143/static",
+                ]),
+                .linkedLibrary("libsodium"),
+            ]
+        ),
     ]
 )
