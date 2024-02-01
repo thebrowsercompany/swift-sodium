@@ -6,6 +6,14 @@ let clibsodiumTarget: Target
     clibsodiumTarget = .binaryTarget(
         name: "Clibsodium",
         path: "Clibsodium.xcframework")
+#elseif os(Windows)
+    clibsodiumTarget = .target(
+        name: "Clibsodium",
+        path: "Clibsodium",
+        publicHeadersPath: "include",
+        linkerSettings: [
+          .linkedLibrary("libsodium"),
+        ])
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
