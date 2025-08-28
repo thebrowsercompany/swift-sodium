@@ -155,7 +155,7 @@ class ReadmeTests : XCTestCase {
     func testSHA256Hashing() {
         let sodium = Sodium()
         let message = "My Test Message".bytes
-        let h = sodium.sha256Hash.hash(message: message)
+        let h = sodium.cryptoHash.sha256.hash(message: message)
 
         XCTAssertNotNil(h)
     }
@@ -163,7 +163,7 @@ class ReadmeTests : XCTestCase {
     func testSHA512Hashing() {
         let sodium = Sodium()
         let message = "My Test Message".bytes
-        let h = sodium.sha512Hash.hash(message: message)
+        let h = sodium.cryptoHash.sha512.hash(message: message)
 
         XCTAssertNotNil(h)
     }

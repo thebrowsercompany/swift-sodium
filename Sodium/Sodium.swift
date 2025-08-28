@@ -9,8 +9,7 @@ public struct Sodium {
     public let randomBytes = RandomBytes()
     public let shortHash = ShortHash()
     public let sign = Sign()
-    public let sha256Hash = SHA256Hash()
-    public let sha512Hash = SHA512Hash()
+    public let cryptoHash = CryptoHash()
     public let utils = Utils()
     public let keyExchange = KeyExchange()
     public let auth = Auth()
@@ -22,6 +21,11 @@ public struct Sodium {
 
     public init() {
         _ = Sodium.once
+    }
+
+    public struct CryptoHash {
+        public let sha256 = SHA256Hash()
+        public let sha512 = SHA512Hash()
     }
 }
 

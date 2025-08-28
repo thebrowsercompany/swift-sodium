@@ -242,7 +242,7 @@ let h = sodium.shortHash.hash(message: message, key: key)
 ```swift
 let sodium = Sodium()
 let message = "My Test Message".bytes
-let h = sodium.sha256Hash.hash(message: message)
+let h = sodium.cryptoHash.sha256.hash(message: message)
 ```
 
 ### SHA-512 hashing
@@ -250,7 +250,7 @@ let h = sodium.sha256Hash.hash(message: message)
 ```swift
 let sodium = Sodium()
 let message = "My Test Message".bytes
-let h = sodium.sha512Hash.hash(message: message)
+let h = sodium.cryptoHash.sha512.hash(message: message)
 ```
 
 ## Random numbers generation
